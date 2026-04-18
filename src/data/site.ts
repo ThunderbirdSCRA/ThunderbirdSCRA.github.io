@@ -58,8 +58,8 @@ export type BoardMember = {
   bio?: string;
   /**
    * Optional photo URL for the board member.
-   * To add a picture: drop an image into `src/assets/` (e.g. `jane-doe.jpg`),
-   * import it at the top of this file, and set `photo: janeDoePhoto`.
+   * To add a picture: drop an image into `src/assets/board` (e.g. `president.jpg`),
+   * import it below `import presidentPhoto from "@/assets/board/president.jpg";` , and set `photo: presidentPhoto` under the appropriate section.
    * Or use a hosted URL like "https://example.com/photo.jpg".
    */
   photo?: string;
