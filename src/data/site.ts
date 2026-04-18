@@ -73,42 +73,42 @@ import richardsPhoto from "@/assets/board/richards.jpeg";
 
 export const BOARD: BoardMember[] = [
   {
-    name: "President",
+    name: "Alex Weeks",
     title: "Chapter President",
     email: "president@thunderbirdscra.org",
     bio: "Leads the chapter and represents members to the national association.",
     photo: weeksPhoto,
   },
   {
-    name: "Vice President",
+    name: "Brandon Dixon",
     title: "Chapter Vice President",
     email: "vp@thunderbirdscra.org",
     bio: "Supports the President and oversees chapter committees.",
     photo: bdixonPhoto,
   },
   {
-    name: "Secretary",
+    name: "Jenny Dixon",
     title: "Chapter Secretary",
     email: "secretary@thunderbirdscra.org",
     bio: "Maintains records, meeting minutes, and chapter correspondence.",
     photo: jdixonPhoto,
   },
   {
-    name: "Treasurer",
+    name: "Jenny Dixon",
     title: "Chapter Treasurer",
     email: "treasurer@thunderbirdscra.org",
     bio: "Oversees finances, dues, and 501(c)(19) compliance.",
     photo: jdixonPhoto,
   },
   {
-    name: "VP of Memberships",
+    name: "Raquel Aguilar",
     title: "VP of Memberships",
     email: "vpmembership@thunderbirdscra.org",
     bio: "Welcomes new members and coordinates recruitment.",
     photo: aguilarPhoto,
   },
   {
-    name: "VP of Awards",
+    name: "Chaz Richards",
     title: "VP of Awards",
     email: "vpawards@thunderbirdscra.org",
     bio: "Oversees chapter awards and recognition.",
