@@ -27,9 +27,7 @@ const Home = () => {
               <span className="block text-secondary mt-2">Signal Corps Regimental Association</span>
             </h1>
             <p className="mt-6 max-w-xl text-base md:text-lg text-primary-foreground/85 leading-relaxed">
-              A 501(c)(19) nonprofit honoring the past, supporting the present,
-              and inspiring the future of every Signaleer — active, reserve,
-              guard, retired, and civilian.
+              A 501(c)(19) nonprofit honoring the past, supporting the present, and inspiring the future of every Signaleer, whether active, reserve, guard, retired, or civilian.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="gold" size="lg">
