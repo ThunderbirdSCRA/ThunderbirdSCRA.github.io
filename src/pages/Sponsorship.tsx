@@ -78,7 +78,7 @@ const Sponsorship = () => {
             in-kind donations, event sponsorships, and corporate partnerships.
           </p>
 
-          {/* ✅ FIX START: centers the button + EIN line on mobile */}
+          
           <div className="mt-6 flex flex-col items-center">
             <Button
               asChild
@@ -88,7 +88,8 @@ const Sponsorship = () => {
             >
               <a
                 href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Custom%20Sponsorship%20Inquiry`}
-                className="inline-flex w-full items-center justify-center gap-2"
+                
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2"
               >
                 <Mail className="h-4 w-4" /> Contact Our Sponsorship Team
               </a>
@@ -99,7 +100,7 @@ const Sponsorship = () => {
               33-1949070.
             </p>
           </div>
-          {/* ✅ FIX END */}
+          
         </div>
       </section>
     </Layout>
