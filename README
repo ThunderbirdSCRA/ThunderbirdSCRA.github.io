@@ -13,30 +13,5 @@ https://thunderbirdscra.org
 
 ---
 
-## 📌 About the Chapter
-
-The Thunderbird Chapter is dedicated to preserving the heritage, traditions, and camaraderie of the U.S. Army Signal Corps. We support active duty, retired, and veteran members through events, networking, and community outreach.
-
----
-
-## 📁 Repository Structure
-
-```bash
-.
-├── index.html          # Main landing page
-├── BoardMembers.html   # About the chapter's Board Members
-├── events.html         # Upcoming and past events
-├── assets/             # Images, stylesheets, and other static files
-│   ├── mobirise/css/
-│   ├── bootstrap/
-│   ├── dropdown/
-│   ├── smoothscroll/
-│   ├── socicon/
-│   ├── theme/
-│   ├── web/assets/cookies-alert-plugin/
-│   ├── ytplayer/
-│   └── images/
-├── CNAME               # used for Github Pages implementation
-├── LICENSE.md          # License information 
-└── README.md           # This file
-
+# Updating the site
+ To update the website, Navigate to the src/data directory. Open the site.ts file, and edit based on the instructions contained therin.
