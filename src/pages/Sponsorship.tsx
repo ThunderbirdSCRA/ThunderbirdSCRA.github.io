@@ -18,7 +18,7 @@ const Sponsorship = () => {
           {SPONSORSHIP_TIERS.map((tier) => (
             <div
               key={tier.name}
-              className={`relative rounded-2xl border-2 p-8 transition-all hover:-translate-y-1 ${
+              className={`relative rounded-2xl border-2 p-8 transition-all hover:-translate-y-1 flex flex-col h-full ${
                 tier.highlight
                   ? "border-secondary bg-card shadow-gold"
                   : "border-border bg-card shadow-card hover:shadow-elegant"
@@ -37,7 +37,7 @@ const Sponsorship = () => {
                   {tier.amount}
                 </span>
               </div>
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-6 space-y-3 flex-1">
                 {tier.perks.map((p) => (
                   <li key={p} className="flex items-start gap-2 text-sm">
                     <Check className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
@@ -48,7 +48,7 @@ const Sponsorship = () => {
               <Button
                 asChild
                 variant={tier.highlight ? "gold" : "hero"}
-                className="mt-7 w-full"
+                className="mt-auto w-full"
               >
                 <a
                   href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20${encodeURIComponent(
