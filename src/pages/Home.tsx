@@ -85,7 +85,7 @@ const Home = () => {
             {
               icon: Heart,
               title: "Support the Regiment",
-              text: "Direct financial support for recruitment, NCO recognition, and Regiment events.",
+              text: "Direct financial support for recruitment, Signaleer recognition, and Regiment events.",
             },
           ].map((c) => (
             <div
