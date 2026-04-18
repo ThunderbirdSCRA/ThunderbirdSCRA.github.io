@@ -4,14 +4,14 @@
 export const SITE = {
   name: "Thunderbird Chapter",
   longName: "Thunderbird Chapter — Signal Corps Regimental Association",
-  facebookUrl: "https://www.facebook.com/", // TODO: replace with actual chapter Facebook URL
+  facebookUrl: "https://www.facebook.com/people/Thunderbird-Chapter-Oklahoma-SCRA/61573525888171/#",
   joinNowUrl: "https://signalcorps.org/memberships",
   bylawsUrl:
-    "https://thunderbirdscra.org/Thunderbird%20Chapter%20Bylaws%20-%20Signed.pdf",
+    "https://thunderbirdscra.org/Thunderbird%20Chapter%20Bylaws%20-%20Signed.pdf", //Will need to update as bylaws update. 
   candidUrl:
-    "https://app.candid.org/profile/16412925/thunderbird-signal-corps-regimental-association-33-1949070",
+    "https://app.candid.org/profile/16412925/thunderbird-signal-corps-regimental-association-33-1949070", // Shouldn't need updating
   candidSealSrc:
-    "https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16412925/svg",
+    "https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16412925/svg", //Shouldn't need updating
 };
 
 // ---------------- EVENTS ----------------
