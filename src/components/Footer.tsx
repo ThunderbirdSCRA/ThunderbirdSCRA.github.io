@@ -1,8 +1,11 @@
+
 import { Facebook } from "lucide-react";
 import { SITE } from "@/data/site";
+import { NavLink } from "@/components/NavLink";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+
   return (
     <footer className="mt-24 bg-navy-deep text-primary-foreground">
       <div className="container py-12 grid gap-10 md:grid-cols-3 items-start">
@@ -30,12 +33,33 @@ const Footer = () => {
             Quick Links
           </h4>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><a href="/" className="hover:text-secondary transition-colors">Home</a></li>
-            <li><a href="/events" className="hover:text-secondary transition-colors">Events</a></li>
-            <li><a href="/sponsorship" className="hover:text-secondary transition-colors">Sponsorship</a></li>
-            <li><a href="/board" className="hover:text-secondary transition-colors">Board Members</a></li>
             <li>
-              <a href={SITE.joinNowUrl} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+              <NavLink to="/" className="hover:text-secondary transition-colors">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/events" className="hover:text-secondary transition-colors">
+                Events
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/sponsorship" className="hover:text-secondary transition-colors">
+                Sponsorship
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/board" className="hover:text-secondary transition-colors">
+                Board Members
+              </NavLink>
+            </li>
+            <li>
+              <a
+                href={SITE.joinNowUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors"
+              >
                 Join the Association
               </a>
             </li>
