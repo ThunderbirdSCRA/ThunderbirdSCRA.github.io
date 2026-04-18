@@ -13,11 +13,16 @@ const Board = () => {
       />
 
       <section className="container py-16">
-        <div className="grid gap-6 justify-center grid-cols-[repeat(auto-fit,minmax(18rem,1fr))]">
+        <div className="grid gap-6 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center">
           {BOARD.map((m) => (
             <article
               key={m.title}
-              className="group max-w-sm w-full mx-auto rounded-xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 flex flex-col h-full"
+              className="
+                group rounded-xl border border-border bg-card p-6 shadow-card
+                hover:shadow-elegant transition-all hover:-translate-y-1
+                flex flex-col h-full
+                lg:w-[340px]
+              "
             >
               {m.photo ? (
                 <img
