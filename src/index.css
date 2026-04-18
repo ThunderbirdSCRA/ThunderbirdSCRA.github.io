@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Thunderbird SCRA Design System
+   Military heraldic palette: Signal Corps Orange/Gold, Regimental Red, Navy
+   All colors HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 220 45% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 45% 12%;
+
+    /* Regimental Red - primary brand */
+    --primary: 0 72% 38%;
+    --primary-foreground: 45 95% 95%;
+
+    /* Signal Gold - secondary accent */
+    --secondary: 42 88% 52%;
+    --secondary-foreground: 220 50% 12%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 220 15% 35%;
+
+    /* Navy */
+    --accent: 218 55% 22%;
+    --accent-foreground: 45 95% 95%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 15% 85%;
+    --input: 40 15% 88%;
+    --ring: 0 72% 38%;
+
+    --radius: 0.5rem;
+
+    /* Brand tokens */
+    --gold: 42 88% 52%;
+    --gold-deep: 38 90% 42%;
+    --navy: 218 55% 22%;
+    --navy-deep: 220 60% 14%;
+    --regimental-red: 0 72% 38%;
+    --regimental-red-deep: 0 75% 28%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-deep)) 0%, hsl(var(--navy)) 50%, hsl(var(--regimental-red-deep)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-deep)) 100%);
+    --gradient-banner: linear-gradient(90deg, hsl(var(--regimental-red-deep)), hsl(var(--regimental-red)));
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--navy-deep) / 0.25);
+    --shadow-gold: 0 8px 30px -8px hsl(var(--gold) / 0.5);
+    --shadow-card: 0 4px 20px -6px hsl(var(--navy-deep) / 0.15);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 50% 8%;
+    --foreground: 45 30% 95%;
+    --card: 220 45% 12%;
+    --card-foreground: 45 30% 95%;
+    --popover: 220 45% 12%;
+    --popover-foreground: 45 30% 95%;
+    --primary: 0 72% 48%;
+    --primary-foreground: 45 95% 95%;
+    --secondary: 42 88% 52%;
+    --secondary-foreground: 220 50% 12%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 45 15% 70%;
+    --accent: 218 55% 30%;
+    --accent-foreground: 45 95% 95%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 0 72% 48%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply container max-w-5xl;
+  }
+}
