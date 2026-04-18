@@ -29,14 +29,17 @@ const Sponsorship = () => {
                   Most Popular
                 </span>
               )}
+
               <h3 className="font-display text-xl font-bold uppercase text-navy-deep">
                 {tier.name}
               </h3>
+
               <div className="mt-3 flex items-baseline gap-1">
                 <span className="font-display text-4xl font-bold text-primary">
                   {tier.amount}
                 </span>
               </div>
+
               <ul className="mt-6 space-y-3 flex-1">
                 {tier.perks.map((p) => (
                   <li key={p} className="flex items-start gap-2 text-sm">
@@ -45,19 +48,22 @@ const Sponsorship = () => {
                   </li>
                 ))}
               </ul>
-              <Button
-                asChild
-                variant={tier.highlight ? "gold" : "hero"}
-                className="mt-auto w-full"
-              >
-                <a
-                  href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20${encodeURIComponent(
-                    tier.name
-                  )}`}
+
+              <div className="mt-auto pt-6">
+                <Button
+                  asChild
+                  variant={tier.highlight ? "gold" : "hero"}
+                  className="w-full"
                 >
-                  <Mail className="h-4 w-4" /> Become a Sponsor
-                </a>
-              </Button>
+                  <a
+                    href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20${encodeURIComponent(
+                      tier.name
+                    )}`}
+                  >
+                    <Mail className="h-4 w-4" /> Become a Sponsor
+                  </a>
+                </Button>
+              </div>
             </div>
           ))}
         </div>
@@ -71,7 +77,9 @@ const Sponsorship = () => {
             in-kind donations, event sponsorships, and corporate partnerships.
           </p>
           <Button asChild variant="gold" size="lg" className="mt-6">
-            <a href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Custom%20Sponsorship%20Inquiry`}>
+            <a
+              href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Custom%20Sponsorship%20Inquiry`}
+            >
               <Mail className="h-4 w-4" /> Contact Our Sponsorship Team
             </a>
           </Button>
