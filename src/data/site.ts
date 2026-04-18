@@ -6,9 +6,7 @@ export const SITE = {
   longName: "Thunderbird Chapter — Signal Corps Regimental Association",
   facebookUrl: "https://www.facebook.com/people/Thunderbird-Chapter-Oklahoma-SCRA/61573525888171/#",
   joinNowUrl: "https://signalcorps.org/memberships",
-  bylawsUrl: encodeURI(
-    "https://thunderbirdscra.org/Thunderbird Chapter Bylaws - Signed.pdf"
-  ), //Will need to update as bylaws update. 
+  bylawsUrl: "/Thunderbird-Chapter-Bylaws-Signed.pdf", // Place updated by-laws in the Public Directory. Will need to update as bylaws update. 
   candidUrl:
     "https://app.candid.org/profile/16412925/thunderbird-signal-corps-regimental-association-33-1949070", // Shouldn't need updating
   candidSealSrc:
