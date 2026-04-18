@@ -36,14 +36,14 @@ export const EVENTS: ChapterEvent[] = [
   {
     title: "Chapter General Membership Meeting",
     date: "2025-10-03",
-    location: "Virtual / Microsoft Teams",
+    location: "Anthem Brewing - Oklahoma City, OK",
     description:
       "Quarterly business meeting open to all chapter members.",
   },
   {
     title: "Lawton Organge Call",
     date: "2026-02-20",
-    location: "Elgin, OK",
+    location: "Rising Eagle Brewery - Elgin, OK",
     description:
       "",
   },
