@@ -59,6 +59,7 @@ const Sponsorship = () => {
                     href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20${encodeURIComponent(
                       tier.name
                     )}`}
+                    className="inline-flex items-center justify-center gap-2"
                   >
                     <Mail className="h-4 w-4" /> Become a Sponsor
                   </a>
@@ -76,16 +77,29 @@ const Sponsorship = () => {
             Looking for something tailored to your organization? We welcome
             in-kind donations, event sponsorships, and corporate partnerships.
           </p>
-          <Button asChild variant="gold" size="lg" className="mt-6">
-            <a
-              href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Custom%20Sponsorship%20Inquiry`}
+
+          {/* ✅ FIX START: centers the button + EIN line on mobile */}
+          <div className="mt-6 flex flex-col items-center">
+            <Button
+              asChild
+              variant="gold"
+              size="lg"
+              className="w-full sm:w-auto"
             >
-              <Mail className="h-4 w-4" /> Contact Our Sponsorship Team
-            </a>
-          </Button>
-          <p className="mt-4 text-xs text-primary-foreground/70">
-            The Thunderbird Chapter is a 501(c)(19) veterans organization. EIN 33-1949070.
-          </p>
+              <a
+                href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Custom%20Sponsorship%20Inquiry`}
+                className="inline-flex w-full items-center justify-center gap-2"
+              >
+                <Mail className="h-4 w-4" /> Contact Our Sponsorship Team
+              </a>
+            </Button>
+
+            <p className="mt-4 max-w-2xl text-center text-xs text-primary-foreground/70">
+              The Thunderbird Chapter is a 501(c)(19) veterans organization. EIN
+              33-1949070.
+            </p>
+          </div>
+          {/* ✅ FIX END */}
         </div>
       </section>
     </Layout>
