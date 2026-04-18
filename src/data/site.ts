@@ -111,7 +111,7 @@ export const BOARD: BoardMember[] = [
     name: "VP of Awards",
     title: "VP of Awards",
     email: "vpawards@thunderbirdscra.org",
-    bio: "Oversees chapter awards, recognition, and ceremonies.",
+    bio: "Oversees chapter awards and recognition.",
     photo: richardsPhoto,
   },
 ];
