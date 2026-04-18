@@ -27,32 +27,25 @@ export type ChapterEvent = {
 
 export const EVENTS: ChapterEvent[] = [
   {
-    title: "Annual Signal Corps Regimental Ball",
-    date: "2025-06-14",
-    location: "Oklahoma City, OK",
+    title: "Chapter General Membership Meeting",
+    date: "2026-05-20",
+    location: "Anthem Brewing - Oklahoma City, OK",
     description:
-      "Join fellow Signaleers for an evening honoring our Regiment's heritage, leadership, and esprit de corps.",
+      "Quarterly business meeting open to all chapter members.",
   },
   {
     title: "Chapter General Membership Meeting",
-    date: "2025-05-08",
+    date: "2025-10-03",
     location: "Virtual / Microsoft Teams",
     description:
-      "Quarterly business meeting open to all chapter members. Agenda distributed one week prior.",
+      "Quarterly business meeting open to all chapter members.",
   },
   {
-    title: "NCOES Recognition Ceremony",
-    date: "2025-08-22",
-    location: "Fort Sill, OK",
+    title: "Lawton Organge Call",
+    date: "2026-02-20",
+    location: "Elgin, OK",
     description:
-      "Recognizing outstanding NCO leaders graduating from professional military education.",
-  },
-  {
-    title: "Chapter Volunteer Day",
-    date: "2025-11-11",
-    location: "Oklahoma Veterans Center",
-    description:
-      "Veterans Day service project supporting local veterans alongside our chapter members and families.",
+      "",
   },
 ];
 
@@ -134,7 +127,7 @@ export type SponsorshipTier = {
 export const SPONSORSHIP_TIERS: SponsorshipTier[] = [
   {
     name: "Bronze Signaleer",
-    amount: "$250",
+    amount: "$500",
     perks: [
       "Recognition on chapter website",
       "Sponsor certificate",
@@ -143,17 +136,17 @@ export const SPONSORSHIP_TIERS: SponsorshipTier[] = [
   },
   {
     name: "Silver Wig-Wag",
-    amount: "$500",
+    amount: "$1,000",
     perks: [
       "All Bronze benefits",
       "Logo on event programs",
       "Recognition at the Annual Ball",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     name: "Gold Thunderbird",
-    amount: "$1,000+",
+    amount: "$1,500+",
     perks: [
       "All Silver benefits",
       "Premier logo placement at all events",
