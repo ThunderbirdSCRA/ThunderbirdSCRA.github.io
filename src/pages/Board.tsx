@@ -13,6 +13,7 @@ const Board = () => {
       />
 
       <section className="container py-16">
+        
         <div className="grid gap-6 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center">
           {BOARD.map((m) => (
             <article
@@ -25,12 +26,7 @@ const Board = () => {
               "
             >
               {m.photo ? (
-                <img
-                  src={m.photo}
-                  alt={`Portrait of ${m.name}`}
-                  className="h-24 w-24 rounded-full object-cover border-2 border-secondary shadow-card"
-                  loading="lazy"
-                />
+                m.photo
               ) : (
                 <div className="flex h-24 w-24 items-center justify-center rounded-full bg-muted border-2 border-dashed border-border text-muted-foreground text-xs text-center px-2">
                   Add photo
@@ -46,7 +42,15 @@ const Board = () => {
               </p>
 
               {m.bio && (
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">
+                <p
+                  className="
+                    mt-3 text-sm text-muted-foreground leading-relaxed
+                    overflow-hidden text-ellipsis
+                    [display:-webkit-box]
+                    [-webkit-line-clamp:4]
+                    [-webkit-box-orient:vertical]
+                  "
+                >
                   {m.bio}
                 </p>
               )}
