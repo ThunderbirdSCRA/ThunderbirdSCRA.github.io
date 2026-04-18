@@ -28,7 +28,7 @@ export type ChapterEvent = {
 export const EVENTS: ChapterEvent[] = [
   {
     title: "Chapter General Membership Meeting",
-    date: "2026-05-20",
+    date: "2026-05-30",
     location: "Anthem Brewing - Oklahoma City, OK",
     description:
       "Quarterly business meeting open to all chapter members.",
