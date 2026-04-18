@@ -16,6 +16,7 @@ export const SITE = {
 
 // ---------------- EVENTS ----------------
 // To add an event, copy a block and edit. Date format: "YYYY-MM-DD"
+// Title, Date, Location, and Description are required fields. End Date and RSVP URL are optional.
 export type ChapterEvent = {
   title: string;
   date: string; // ISO date
@@ -88,16 +89,9 @@ export const BOARD: BoardMember[] = [
   },
   {
     name: "Jenny Dixon",
-    title: "Chapter Secretary",
+    title: "Chapter Secretary & Treasurer",
     email: "secretary@thunderbirdscra.org",
-    bio: "Maintains records, meeting minutes, and chapter correspondence.",
-    photo: jdixonPhoto,
-  },
-  {
-    name: "Jenny Dixon",
-    title: "Chapter Treasurer",
-    email: "treasurer@thunderbirdscra.org",
-    bio: "Oversees finances, dues, and 501(c)(19) compliance.",
+    bio: "Maintains records, oversees finances, dues, and 501(c)(19) compliance.",
     photo: jdixonPhoto,
   },
   {
