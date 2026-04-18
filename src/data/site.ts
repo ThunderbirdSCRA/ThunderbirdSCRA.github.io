@@ -1,6 +1,12 @@
 // Central data file — easy for non-developers to edit.
 // Update events, board members, and sponsorship tiers here.
 
+import "@/assets/Aguilar.jpeg" as agsPhoto;
+import "@/assets/BDixon.jpeg" as bdixonPhoto;
+import "@/assets/JDixon.jpeg" as jdixonPhoto;
+import "@/assets/Richards.jpeg" as richardsPhoto;
+import "@/assets/Weeks.jpeg" as weeksPhoto;
+
 export const SITE = {
   name: "Thunderbird Chapter",
   longName: "Thunderbird Chapter — Signal Corps Regimental Association",
@@ -76,36 +82,42 @@ export const BOARD: BoardMember[] = [
     title: "Chapter President",
     email: "president@thunderbirdscra.org",
     bio: "Leads the chapter and represents members to the national association.",
+    photo: weeksPhoto,
   },
   {
     name: "Vice President",
     title: "Chapter Vice President",
     email: "vp@thunderbirdscra.org",
     bio: "Supports the President and oversees chapter committees.",
+    photo: bdixonPhoto,
   },
   {
     name: "Secretary",
     title: "Chapter Secretary",
     email: "secretary@thunderbirdscra.org",
     bio: "Maintains records, meeting minutes, and chapter correspondence.",
+    photo: jdixonPhoto,
   },
   {
     name: "Treasurer",
     title: "Chapter Treasurer",
     email: "treasurer@thunderbirdscra.org",
     bio: "Oversees finances, dues, and 501(c)(19) compliance.",
+    photo: jdixonPhoto,
   },
   {
     name: "VP of Memberships",
     title: "VP of Memberships",
     email: "vpmembership@thunderbirdscra.org",
     bio: "Welcomes new members and coordinates recruitment.",
+    photo: agsPhoto,
   },
   {
     name: "VP of Awards",
     title: "VP of Awards",
     email: "vpawards@thunderbirdscra.org",
     bio: "Oversees chapter awards, recognition, and ceremonies.",
+    photo: richardsPhoto,
   },
 ];
 
@@ -120,7 +132,7 @@ export type SponsorshipTier = {
 export const SPONSORSHIP_TIERS: SponsorshipTier[] = [
   {
     name: "Bronze Signaleer",
-    amount: "$250",
+    amount: "$500",
     perks: [
       "Recognition on chapter website",
       "Sponsor certificate",
@@ -129,17 +141,17 @@ export const SPONSORSHIP_TIERS: SponsorshipTier[] = [
   },
   {
     name: "Silver Wig-Wag",
-    amount: "$500",
+    amount: "$1,000",
     perks: [
       "All Bronze benefits",
       "Logo on event programs",
       "Recognition at the Annual Ball",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     name: "Gold Thunderbird",
-    amount: "$1,000+",
+    amount: "$2,000+",
     perks: [
       "All Silver benefits",
       "Premier logo placement at all events",
