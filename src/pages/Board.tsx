@@ -13,11 +13,11 @@ const Board = () => {
       />
 
       <section className="container py-16">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6 justify-center">
           {BOARD.map((m) => (
             <article
               key={m.title}
-              className="group rounded-xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 flex flex-col h-full"
+              className="group rounded-xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 flex flex-col h-full lg:col-span-2"
             >
               {m.photo ? (
                 <img
