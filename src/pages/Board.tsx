@@ -17,7 +17,7 @@ const Board = () => {
           {BOARD.map((m) => (
             <article
               key={m.title}
-              className="group rounded-xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1"
+              className="group rounded-xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 flex flex-col h-full"
             >
               {m.photo ? (
                 <img
@@ -31,21 +31,25 @@ const Board = () => {
                   Add photo
                 </div>
               )}
+
               <h3 className="mt-5 font-display text-xl font-bold uppercase text-navy-deep">
                 {m.name}
               </h3>
+
               <p className="text-sm font-semibold text-primary uppercase tracking-wider">
                 {m.title}
               </p>
+
               {m.bio && (
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">
                   {m.bio}
                 </p>
               )}
+
               <a
                 href={`mailto:${m.email}`}
                 aria-label={`Email ${m.name}`}
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                className="mt-auto pt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
               >
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-secondary-foreground group-hover:scale-110 transition-transform">
                   <Mail className="h-5 w-5" />
