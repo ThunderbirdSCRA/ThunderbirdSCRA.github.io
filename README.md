@@ -1,0 +1,18 @@
+
+# Thunderbird Chapter - Signal Corps Regimental Association
+
+Welcome to the official website of the **Thunderbird Chapter** of the **Signal Corps Regimental Association (SCRA)**. This site serves as a hub for members, veterans, and supporters of the Signal Corps community in the Thunderbird Chapter region.
+
+## 🌐 Website
+
+This website is hosted via **GitHub Pages** and is accessible at:
+
+https://thunderbirdscra.github.io/
+and
+https://thunderbirdscra.org
+
+
+---
+
+# Updating the site
+To update the website, Navigate to the src/data directory. Open the site.ts file, and edit based on the instructions contained therin.

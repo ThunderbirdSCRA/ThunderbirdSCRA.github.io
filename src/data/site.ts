@@ -34,6 +34,13 @@ export const EVENTS: ChapterEvent[] = [
       "Quarterly business meeting open to all chapter members.",
   },
   {
+    title: "1/78 FA Orange Call",
+    date: "2026-05-01",
+    location: "Lake Elmer Thomas Recreation Area - Ft. Sill, Oklahoma",
+    description:
+      "Orange Call for all members and potential members in 1/78 FA.",
+  },
+  {
     title: "Chapter General Membership Meeting",
     date: "2025-10-03",
     location: "Anthem Brewing - Oklahoma City, OK",
