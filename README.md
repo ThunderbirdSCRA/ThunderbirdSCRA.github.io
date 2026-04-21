@@ -1,3 +1,6 @@
+[![Deploy Site](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/main.yml)
+[![Refresh Action SHAs](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/refresh-action-shas.yml/badge.svg)](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/refresh-action-shas.yml)
+
 # Thunderbird Chapter – Signal Corps Regimental Association (SCRA)
 
 This repository contains the source code for the official website of the **Thunderbird Chapter of the Signal Corps Regimental Association (SCRA)**.
