@@ -1,8 +1,12 @@
-name: Deploy Vite site to GitHub Pages
+name: Deploy Site
 
 on:
   push:
     branches: [ main ]
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -13,13 +17,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@0c366fd3fbcf3c5e9e2f1f6d8f6e4f1c2b4f3c3f
+
+      - name: Setup Node
+        uses: actions/setup-node@53b8394f6e8e4e0f7c1e6c2f4d9c1a5b2f8d9c3a
         with:
-          node-version: 20
-      - run: npm ci
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+          node-version: 24
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          export NODE_ENV=production
+          npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@fc324d3c6e4a1b2d9f7c3e1a4b9d8c2f3e7a1c4d
         with:
           path: dist
 
@@ -27,4 +43,5 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@cd2ce8f4b7a1c9d3e2f7b4a1d9c3e7f2a1b4c9d2
