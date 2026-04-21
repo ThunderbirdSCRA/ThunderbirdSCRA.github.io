@@ -1,4 +1,4 @@
-![Deployment Status](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/.main.yml/badge.svg)
+![Deployment Status](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/.pages.yml/badge.svg)
 
 # Thunderbird Chapter – Signal Corps Regimental Association (SCRA)
 
