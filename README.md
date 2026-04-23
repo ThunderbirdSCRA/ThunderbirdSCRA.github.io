@@ -35,6 +35,36 @@ The site is built using the following technologies:
 
 This is a fully static site with no server-side backend.
 
+## 🖋️ Site Customization
+
+In order to make this site your own, you will need to edit and customize the following files:
+
+#### 1.  /src/App.tsx
+
+    The Menu Navigation Bar is managed here. All Entries in this file must have a matching Site Page located at /src/pages/ 
+
+#### 2.  /src/pages/Home.tsx
+
+    This is the Home Page. Review all text and linked pictures to ensure it matches your chapters information.
+
+#### 3.  /src/pages/Board.tsx
+    
+    This is the Board Member Page. You just need to edit the description and title for the page to match your chapters by-laws.
+
+#### 4.  /src/pages/Events.tsx
+
+    All Events, as they are added, will be shared here. You only need to edit the Descripton on the page.
+
+#### 5.  /src/pages/Sponsorship.tsx
+
+    a.  You only need to edit the Chapter name and EIN at the bottom.     
+    b.  If your chapter does not have, or does not seek external sponsorship, you can remove this page, and remove the link in the App.tsx file.
+
+#### 6.  /src/data/site.ts
+
+    a.  The majority of site data will be managed and edited here. Site Variables, Events, Board Members, Sponsorship levels, Contact Information.
+    b.  The ongoing goal of the project will be to have all information on the site pages utilize variables contained within this file.
+
 ## ✅ Prerequisites (for Local Development)
 
 To run this site locally, you will need **Node.js**, which includes **npm** (Node Package Manager).
@@ -106,7 +136,7 @@ https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pag
 
 ## 📁 Typical Project Structure
 
-The repository generally follows a standard Vite + React + TypeScript layout, for example:
+
 
 ```
 /
@@ -123,7 +153,7 @@ The repository generally follows a standard Vite + React + TypeScript layout, fo
 └── package.json
 ```
 
-Adjust this section if the project structure changes.
+
 
 ## 🤝 Contributing
 
