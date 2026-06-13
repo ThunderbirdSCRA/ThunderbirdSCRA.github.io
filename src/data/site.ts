@@ -62,6 +62,7 @@ export type BoardMember = {
   name: string;
   title: string;
   email: string;
+  rank: string;
   bio?: string;
   /**
    * Optional photo URL for the board member.
@@ -83,6 +84,7 @@ export const BOARD: BoardMember[] = [
     name: "Alex Weeks",
     title: "Chapter President",
     email: "president@thunderbirdscra.org",
+    rank: "WO1",
     bio: "Leads the chapter and represents members to the national association.",
     photo: weeksPhoto,
   },
@@ -90,6 +92,7 @@ export const BOARD: BoardMember[] = [
     name: "Brandon Dixon",
     title: "Chapter Vice President",
     email: "vp@thunderbirdscra.org",
+    rank: "CW2",
     bio: "Supports the President and oversees chapter committees.",
     photo: bdixonPhoto,
   },
@@ -97,6 +100,7 @@ export const BOARD: BoardMember[] = [
     name: "Jenny Dixon",
     title: "Chapter Secretary & Treasurer",
     email: "secretary@thunderbirdscra.org",
+    rank: "WO1",
     bio: "Maintains records, oversees finances, dues, and 501(c)(19) compliance.",
     photo: jdixonPhoto,
   },
@@ -104,6 +108,7 @@ export const BOARD: BoardMember[] = [
     name: "Raquel Aguilar",
     title: "VP of Memberships",
     email: "vpmembership@thunderbirdscra.org",
+    rank: "SGT",
     bio: "Welcomes new members and coordinates recruitment.",
     photo: aguilarPhoto,
   },
@@ -111,6 +116,7 @@ export const BOARD: BoardMember[] = [
     name: "Chaz Richards",
     title: "VP of Awards",
     email: "vpawards@thunderbirdscra.org",
+    rank: "SFC",
     bio: "Oversees chapter awards and recognition.",
     photo: richardsPhoto,
   },
