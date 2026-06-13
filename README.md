@@ -11,7 +11,7 @@ The site is a modern static web application built with **React, TypeScript, and 
 
 The production site is available at:
 
-https://thunderscra.org
+https://thunderbirdscra.org
 
 ## 🎯 Purpose of the Site
 
