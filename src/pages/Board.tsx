@@ -40,7 +40,7 @@ const Board = () => {
               )}
 
               <h3 className="mt-5 font-display text-xl font-bold uppercase text-navy-deep">
-                {m.name}
+                {m.rank} {m.name}
               </h3>
 
               <p className="text-sm font-semibold text-primary uppercase tracking-wider">
