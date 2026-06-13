@@ -4,7 +4,7 @@
 export const SITE = {
   name: "Thunderbird Chapter",
   longName: "Thunderbird Chapter — Signal Corps Regimental Association",
-  facebookUrl: "https://www.facebook.com/people/Thunderbird-Chapter-Oklahoma-SCRA/61573525888171/#",
+  facebookUrl: "https://www.facebook.com/people/Thunderbird-Chapter-Oklahoma-SCRA/61573525888171/",
   joinNowUrl: "https://signalcorps.org/memberships",
   bylawsUrl: "/Thunderbird-Chapter-Bylaws-Signed.pdf", // Place updated by-laws in the Public Directory. Will need to update as bylaws update. 
   candidUrl:
