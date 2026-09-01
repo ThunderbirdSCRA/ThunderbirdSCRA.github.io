@@ -26,6 +26,24 @@ export type ChapterEvent = {
 
 export const EVENTS: ChapterEvent[] = [
   {
+    title: "Oklahoma Fallen Heros Half Marathon",
+    date: "2026-09-19",
+    location: "SW 15th & Meridian",
+    description: "Running a table selling Thunderbird Chapter Merch. More Info: https://okfallenheroes.org/",
+  },
+  {
+    title: "Chapter General Membership Meeting",
+    date: "2026-10-17",
+    location: "Anthem Brewing - Oklahoma City, OK",
+    description: "Quarterly business meeting open to all chapter members.",
+  },
+  {
+    title: "Signal Corps Ball",
+    date: "2027-04-17",
+    location: "Oklahoma National Guard Mueseum",
+    description: "Additional Details and RSVP link to be provided at a later date. Keep your eyes peeled!.",
+  },
+  {
     title: "Chapter General Membership Meeting",
     date: "2026-05-30",
     location: "Anthem Brewing - Oklahoma City, OK",
