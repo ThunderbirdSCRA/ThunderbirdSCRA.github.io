@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import { Facebook, Menu, X } from "lucide-react";
+import { Facebook, Heart, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { SITE } from "@/data/site";
 import emblem from "@/assets/thunderbird-logo.png";
@@ -10,6 +10,8 @@ const navItems = [
   { to: "/events", label: "Events" },
   { to: "/sponsorship", label: "Sponsorship" },
   { to: "/board", label: "Board Members" },
+  { to: "/awards", label: "Awards" },
+  { to: "/bylaws", label: "Bylaws" },
 ];
 
 const Header = () => {
@@ -27,10 +29,10 @@ const Header = () => {
             height={48}
           />
           <div className="hidden sm:flex flex-col leading-tight">
-            <span className="font-display text-lg font-bold uppercase tracking-wide text-navy-deep">
+            <span className="font-display text-fluid-xl font-bold uppercase tracking-wide text-navy-deep">
               Thunderbird Chapter
             </span>
-            <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+            <span className="text-fluid-xs uppercase tracking-[0.18em] text-muted-foreground">
               Signal Corps Regimental Assoc.
             </span>
           </div>
@@ -43,7 +45,7 @@ const Header = () => {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors rounded-md ${
+                `px-4 py-2 text-fluid-sm font-semibold uppercase tracking-wider transition-colors rounded-md ${
                   isActive
                     ? "text-primary"
                     : "text-foreground/80 hover:text-primary"
@@ -53,14 +55,6 @@ const Header = () => {
               {item.label}
             </NavLink>
           ))}
-          <a
-            href={SITE.bylawsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors rounded-md text-foreground/80 hover:text-primary"
-          >
-            Bylaws
-          </a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -76,6 +70,11 @@ const Header = () => {
           <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
             <a href={SITE.joinNowUrl} target="_blank" rel="noopener noreferrer">
               Join Now
+            </a>
+          </Button>
+          <Button asChild variant="gold" size="sm" className="hidden lg:inline-flex">
+            <a href={SITE.donateUrl} target="_blank" rel="noopener noreferrer">
+              <Heart className="h-4 w-4 mr-1.5" /> Donate
             </a>
           </Button>
           <button
@@ -99,38 +98,34 @@ const Header = () => {
                 end={item.to === "/"}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `px-2 py-3 text-sm font-semibold uppercase tracking-wider ${
-                    isActive ? "text-primary" : "text-foreground/80"
-                  }`
+                `px-2 py-3 text-fluid-sm font-semibold uppercase tracking-wider ${
+                  isActive ? "text-primary" : "text-foreground/80"
+                }`
                 }
               >
                 {item.label}
               </NavLink>
             ))}
-            <a
-              href={SITE.bylawsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="px-2 py-3 text-sm font-semibold uppercase tracking-wider text-foreground/80"
-            >
-              Bylaws
-            </a>
-            <div className="flex items-center gap-3 pt-3 pb-2">
+            <div className="flex flex-col gap-2 pt-3 pb-2">
+              <Button asChild variant="hero" className="w-full">
+                <a href={SITE.joinNowUrl} target="_blank" rel="noopener noreferrer">
+                  Join Now
+                </a>
+              </Button>
+              <Button asChild variant="gold" className="w-full">
+                <a href={SITE.donateUrl} target="_blank" rel="noopener noreferrer">
+                  <Heart className="h-4 w-4 mr-1.5" /> Donate
+                </a>
+              </Button>
               <a
                 href={SITE.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our Facebook page"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-navy text-primary-foreground"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-navy text-primary-foreground self-center"
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <Button asChild variant="hero" className="flex-1">
-                <a href={SITE.joinNowUrl} target="_blank" rel="noopener noreferrer">
-                  Join Now
-                </a>
-              </Button>
             </div>
           </nav>
         </div>

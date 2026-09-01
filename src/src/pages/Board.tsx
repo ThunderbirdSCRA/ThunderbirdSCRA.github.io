@@ -39,11 +39,11 @@ const Board = () => {
                 </div>
               )}
 
-              <h3 className="mt-5 font-display text-xl font-bold uppercase text-navy-deep">
+              <h2 className="mt-5 font-display text-fluid-lg font-bold uppercase text-navy-deep">
                 {m.rank} {m.name}
-              </h3>
+              </h2>
 
-              <p className="text-sm font-semibold text-primary uppercase tracking-wider">
+              <p className="text-fluid-sm font-semibold text-primary uppercase tracking-wider">
                 {m.title}
               </p>
 
@@ -51,7 +51,7 @@ const Board = () => {
               {m.bio && (
                 <p
                   className="
-                    mt-3 text-sm text-muted-foreground leading-relaxed
+                    mt-3 text-fluid-sm text-muted-foreground leading-relaxed
                     overflow-hidden text-ellipsis
                     [display:-webkit-box]
                     [-webkit-line-clamp:4]
@@ -65,7 +65,7 @@ const Board = () => {
               <a
                 href={`mailto:${m.email}`}
                 aria-label={`Email ${m.name}`}
-                className="mt-auto pt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                className="mt-auto pt-5 inline-flex items-center gap-2 text-fluid-sm font-semibold text-primary hover:text-primary/80 transition-colors"
               >
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-secondary-foreground group-hover:scale-110 transition-transform">
                   <Mail className="h-5 w-5" />

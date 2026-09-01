@@ -32,7 +32,7 @@ const Footer = () => {
           <h4 className="font-display text-sm uppercase tracking-[0.18em] text-secondary">
             Quick Links
           </h4>
-          <ul className="mt-3 space-y-2 text-sm">
+          <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
             <li>
               <NavLink to="/" className="hover:text-secondary transition-colors">
                 Home
@@ -51,6 +51,16 @@ const Footer = () => {
             <li>
               <NavLink to="/board" className="hover:text-secondary transition-colors">
                 Board Members
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/awards" className="hover:text-secondary transition-colors">
+                Awards
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/bylaws" className="hover:text-secondary transition-colors">
+                Bylaws
               </NavLink>
             </li>
             <li>

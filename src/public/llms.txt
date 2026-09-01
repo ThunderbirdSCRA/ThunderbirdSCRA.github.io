@@ -1,0 +1,12 @@
+# Thunderbird Chapter — Signal Corps Regimental Association
+
+> Official site of the Thunderbird Chapter of the Signal Corps Regimental Association (SCRA): events, sponsorship, board, awards, and chapter bylaws.
+
+## Pages
+
+- [Home](/): Chapter overview, mission, and latest highlights.
+- [Events](/events): Upcoming chapter events, balls, and gatherings.
+- [Sponsorship](/sponsorship): Sponsorship tiers and how to support the chapter.
+- [Board](/board): Current Thunderbird Chapter board members and leadership.
+- [Awards](/awards): SCRA awards (MMA, BOM, SOM, GOM, Brevet Colonel, Wahatchee) with purpose, criteria, and submission FAQs.
+- [Bylaws](/bylaws): Read the chapter bylaws in-browser or download the PDF.

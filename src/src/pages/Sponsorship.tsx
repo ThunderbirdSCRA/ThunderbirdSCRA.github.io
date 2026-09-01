@@ -1,8 +1,8 @@
-import { Check, Mail } from "lucide-react";
+import { Check, Heart, Mail } from "lucide-react";
 import Layout from "@/components/Layout";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
-import { SPONSORSHIP_TIERS, SPONSOR_CONTACT_EMAIL } from "@/data/site";
+import { SITE, SPONSORSHIP_TIERS, SPONSOR_CONTACT_EMAIL } from "@/data/site";
 
 const Sponsorship = () => {
   return (
@@ -14,6 +14,35 @@ const Sponsorship = () => {
       />
 
       <section className="container py-16">
+        <div className="rounded-2xl border-2 border-secondary bg-card p-8 shadow-gold mb-10">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="max-w-2xl">
+              <h2 className="font-display text-2xl font-bold uppercase text-navy-deep">
+                Make a One-Time Donation
+              </h2>
+              <p className="mt-2 text-foreground/85">
+                Your tax-exempt contribution directly supports chapter programs,
+                events, and recognition of Signal Corps professionals. Every gift,
+                of any size, strengthens the Thunderbird community.
+              </p>
+              <p className="mt-3 text-xs text-muted-foreground">
+                The Thunderbird Chapter is a 501(c)(19) veterans organization. EIN
+                33-1949070. Tax deductible where allowable by law.
+              </p>
+            </div>
+            <Button asChild variant="gold" size="lg" className="w-full md:w-auto shrink-0">
+              <a
+                href={SITE.donateUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2"
+              >
+                <Heart className="h-4 w-4" /> Donate Now
+              </a>
+            </Button>
+          </div>
+        </div>
+
         <div className="grid gap-6 md:grid-cols-3">
           {SPONSORSHIP_TIERS.map((tier) => (
             <div
