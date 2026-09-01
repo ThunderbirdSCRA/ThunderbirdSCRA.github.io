@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Home from "./pages/Home";
-import Events from "./pages/Events";
-import Sponsorship from "./pages/Sponsorship";
-import Board from "./pages/Board";
-import Awards from "./pages/Awards";
-import Bylaws from "./pages/Bylaws";
+import Home from "./pages/Home.tsx";
+import Events from "./pages/Events.tsx";
+import Sponsorship from "./pages/Sponsorship.tsx";
+import Board from "./pages/Board.tsx";
+import Awards from "./pages/Awards.tsx";
+import Bylaws from "./pages/Bylaws.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
