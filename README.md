@@ -1,8 +1,11 @@
+[![Deploy Site](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/main.yml)
+[![Refresh Action SHAs](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/refresh-action-shas.yml/badge.svg)](https://github.com/ThunderbirdSCRA/ThunderbirdSCRA.github.io/actions/workflows/refresh-action-shas.yml)
+
 # Thunderbird Chapter – Signal Corps Regimental Association (SCRA)
 
 This repository contains the source code for the official website of the **Thunderbird Chapter of the Signal Corps Regimental Association (SCRA)**.
 
-The site is a modern static web application built with **React, TypeScript, and Vite**, and is published using **CloudFlare Pages**.
+The site is a modern static web application built with **React, TypeScript, and Vite**, and is published using **GitHub Pages**.
 
 ## 🌐 Live Website
 
@@ -28,7 +31,7 @@ The site is built using the following technologies:
 - Vite
 - HTML
 - CSS
-- Cloudflare Pages
+- GitHub Pages (hosting and deployment)
 
 This is a fully static site with no server-side backend.
 
@@ -173,7 +176,7 @@ There is currently no formal security policy defined. If you discover an issue o
 This project is licensed under the **MIT License**.
 some components and dependencies of this repositiory may have other licenses. Check before modifying any dependancy code.
 
-Copyright © Thunderbird Chapter, Signal Corps Regimental Association  
+Copyright © ThunderbirdSCRA  
 See the `LICENSE` file for full details.
 
 ## ⚠️ Disclaimer

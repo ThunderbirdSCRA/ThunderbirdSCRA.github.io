@@ -14,58 +14,94 @@ export const SITE = {
 
 // ---------------- EVENTS ----------------
 // To add an event, copy a block and edit. Date format: "YYYY-MM-DD"
-// Title, Date, Location, and Description are required fields. End Date and RSVP URL are optional.
+// Required: title, date, location, summary (1–2 sentence teaser shown on the Home and Events pages).
+// Everything else is optional — leave it out and it simply won't be shown.
+//
+// The event page URL slug is generated automatically from the title and date;
+// set `slug` only if you want a custom URL.
 export type ChapterEvent = {
   title: string;
-  date: string; // ISO date
-  endDate?: string;
+  date: string; // ISO date "YYYY-MM-DD"
   location: string;
-  description: string;
-  rsvpUrl?: string;
+  summary: string; // Short teaser (1–2 sentences) shown in previews
+  slug?: string; // Optional custom URL slug
+  endDate?: string; // For multi-day events
+  startTime?: string; // "18:00" (24-hour)
+  endTime?: string; // "20:00" (24-hour)
+  address?: string; // Full street address
+  description?: string; // Full description, shown on the event detail page
+  rsvpUrl?: string; // RSVP / registration link
+  websiteUrl?: string; // External event website
+  cost?: string; // e.g. "Free", "$25 per person"
+  audience?: string; // Who the event is for
+  additionalInfo?: string; // Parking, dress code, notes, etc.
+  image?: string; // Optional event image (import an asset or use a URL)
+  imageAlt?: string;
 };
 
 export const EVENTS: ChapterEvent[] = [
   {
-    title: "Oklahoma Fallen Heros Half Marathon",
+    title: "Oklahoma Fallen Heroes Half Marathon",
     date: "2026-09-19",
-    location: "SW 15th & Meridian",
-    description: "Running a table selling Thunderbird Chapter Merch. More Info: https://okfallenheroes.org/",
+    location: "SW 15th and Meridian - Oklahoma City, OK",
+    summary: "Visit our table at the Fallen Heroes Half Marathon and grab your Thunderbird Chapter merch.",
+    description: "Visit our table at the Fallen Heroes Half Marathon and grab your Thunderbird Chapter merch. Come see your chapter leadership, enjoy conversation, and either cheer on runners particiapting in the Half Marathon, or run yourself!"
+    startTime: "06:00",
+    endTime: "12:00",
+    address: "4345 SW 15th St, Oklahoma City, OK 73108",
+    websiteUrl: "https://okfallenheroes.org/",
+    cost: "Free",
+    additionalInfo: "The event is located at the Oklahoma River Cruises - Meridian Landing.",
   },
   {
     title: "Chapter General Membership Meeting",
     date: "2026-10-17",
     location: "Anthem Brewing - Oklahoma City, OK",
-    description: "Quarterly business meeting open to all chapter members.",
+    summary: "Our quarterly business meeting — hear what the chapter is planning and have your say.",
+    description: "Our quarterly business meeting — hear what the chapter is planning and have your say.",
+    startTime: "18:00",
+    endTime: "20:00",
+    address: "908 SW 4th St, Oklahoma City, OK 73109",
+    cost: "Free",
+    audience: "All chapter members",
   },
   {
     title: "Signal Corps Ball",
     date: "2027-04-17",
-    location: "Oklahoma National Guard Mueseum",
-    description: "Additional Details and RSVP link to be provided at a later date. Keep your eyes peeled!.",
+    location: "Oklahoma National Guard Museum - Oklahoma City, OK",
+    summary: "Save the date for an unforgettable evening celebrating the Signal Corps — details coming soon.",
+    additionalInfo: "Additional details, ticket pricing and RSVP link to be provided at a later date. Keep your eyes peeled!",
+    audience: "All chapter members"
   },
   {
     title: "Chapter General Membership Meeting",
     date: "2026-05-30",
     location: "Anthem Brewing - Oklahoma City, OK",
+    summary: "Our quarterly business meeting — hear what the chapter is planning and have your say.",
     description: "Quarterly business meeting open to all chapter members.",
+    audience: "All chapter members",
   },
   {
     title: "1/78 FA Orange Call",
     date: "2026-05-01",
     location: "Lake Elmer Thomas Recreation Area - Ft. Sill, Oklahoma",
+    summary: "An Orange Call for 1/78 FA — meet the chapter and learn what the SCRA offers.",
     description: "Orange Call for all members and potential members in 1/78 FA.",
+    audience: "Soldiers of 1/78 FA",
   },
   {
     title: "Chapter General Membership Meeting",
     date: "2025-10-03",
     location: "Anthem Brewing - Oklahoma City, OK",
+    summary: "Our quarterly business meeting — hear what the chapter is planning and have your say.",
     description: "Quarterly business meeting open to all chapter members.",
+    audience: "All chapter members",
   },
   {
-    title: "Lawton Organge Call",
+    title: "Lawton Orange Call",
     date: "2026-02-20",
     location: "Rising Eagle Brewery - Elgin, OK",
-    description: "",
+    summary: "Join us in Lawton for an evening of fellowship with fellow Signaleers.",
   },
 ];
 
