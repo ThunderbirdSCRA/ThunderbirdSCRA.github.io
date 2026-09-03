@@ -45,7 +45,7 @@ export const EVENTS: ChapterEvent[] = [
     date: "2026-09-19",
     location: "SW 15th and Meridian - Oklahoma City, OK",
     summary: "Visit our table at the Fallen Heroes Half Marathon and grab your Thunderbird Chapter merch.",
-    description: "Visit our table at the Fallen Heroes Half Marathon and grab your Thunderbird Chapter merch. Come see your chapter leadership, enjoy conversation, and either cheer on runners particiapting in the Half Marathon, or run yourself!"
+    description: "Visit our table at the Fallen Heroes Half Marathon and grab your Thunderbird Chapter merch. Come see your chapter leadership, enjoy conversation, and either cheer on runners particiapting in the Half Marathon, or run yourself!",
     startTime: "06:00",
     endTime: "12:00",
     address: "4345 SW 15th St, Oklahoma City, OK 73108",
