@@ -2,7 +2,7 @@
 
 This repository contains the source code for the official website of the **Thunderbird Chapter of the Signal Corps Regimental Association (SCRA)**.
 
-The site is a modern static web application built with **React, TypeScript, and Vite**, and is published using **GitHub Pages**.
+The site is a modern static web application built with **React, TypeScript, and Vite**, and is published using **CloudFlare Pages**.
 
 ## 🌐 Live Website
 
@@ -28,7 +28,7 @@ The site is built using the following technologies:
 - Vite
 - HTML
 - CSS
-- GitHub Pages (hosting and deployment)
+- Cloudflare Pages
 
 This is a fully static site with no server-side backend.
 
@@ -173,7 +173,7 @@ There is currently no formal security policy defined. If you discover an issue o
 This project is licensed under the **MIT License**.
 some components and dependencies of this repositiory may have other licenses. Check before modifying any dependancy code.
 
-Copyright © ThunderbirdSCRA  
+Copyright © Thunderbird Chapter, Signal Corps Regimental Association  
 See the `LICENSE` file for full details.
 
 ## ⚠️ Disclaimer
