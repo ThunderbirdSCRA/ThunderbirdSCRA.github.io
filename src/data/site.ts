@@ -16,6 +16,7 @@ export const SITE = {
 // To add an event, copy a block and edit. Date format: "YYYY-MM-DD"
 // Required: title, date, location, summary (1–2 sentence teaser shown on the Home and Events pages).
 // Everything else is optional — leave it out and it simply won't be shown.
+//
 // The event page URL slug is generated automatically from the title and date;
 // set `slug` only if you want a custom URL.
 export type ChapterEvent = {
@@ -42,10 +43,13 @@ export const EVENTS: ChapterEvent[] = [
   {
     title: "Oklahoma Fallen Heroes Half Marathon",
     date: "2026-09-19",
-    location: "SW 15th & Meridian - Oklahoma City, OK",
+    location: "4345 SW 15th St, Oklahoma City, OK 73108",
     summary: "Visit our table at the Fallen Heroes Half Marathon and grab your Thunderbird Chapter merch.",
-    description: "Running a table selling Thunderbird Chapter Merch.",
+    startTime: "06:00",
+    endTime: "12:00",
+    address: "",
     websiteUrl: "https://okfallenheroes.org/",
+    additionalInfo: "The event is located at the Oklahoma River Cruises - Meridian Landing. ",
   },
   {
     title: "Chapter General Membership Meeting",
@@ -60,7 +64,8 @@ export const EVENTS: ChapterEvent[] = [
     date: "2027-04-17",
     location: "Oklahoma National Guard Museum - Oklahoma City, OK",
     summary: "Save the date for an unforgettable evening celebrating the Signal Corps — details coming soon.",
-    additionalInfo: "Additional details and RSVP link to be provided at a later date. Keep your eyes peeled!",
+    additionalInfo: "Additional details, ticket pricing and RSVP link to be provided at a later date. Keep your eyes peeled!",
+    audience: "All chapter members"
   },
   {
     title: "Chapter General Membership Meeting",
