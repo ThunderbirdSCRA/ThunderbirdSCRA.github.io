@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Users, Heart, Award } from "lucide-react";
+import { ArrowRight, Shield, Users, Heart, Award, Calendar, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { SITE } from "@/data/site";
+import { SITE, EVENTS } from "@/data/site";
+import { eventSlug, formatEventDate, getNextEvent } from "@/lib/events";
 import emblem from "@/assets/thunderbird-logo.png";
 import hero from "@/assets/hero-signal.jpg";
+
+const nextEvent = getNextEvent(EVENTS);
 
 const Home = () => {
   return (
@@ -35,9 +38,6 @@ const Home = () => {
                   Join Now <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-secondary bg-transparent text-secondary hover:bg-secondary hover:text-secondary-foreground">
-                <Link to="/events">Upcoming Events</Link>
-              </Button>
             </div>
           </div>
           <div className="hidden md:flex justify-center">
@@ -51,6 +51,59 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* NEXT EVENT */}
+      {nextEvent && (
+        <section className="container pt-16">
+          <div className="mb-6 text-center">
+            <Link
+              to="/events"
+              className="inline-flex items-center gap-2 font-display text-fluid-xl font-bold uppercase text-navy-deep hover:text-primary transition-colors group"
+            >
+              Upcoming Events
+              <ArrowRight className="h-5 w-5 text-secondary group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <div className="mt-2 h-1 w-20 bg-gradient-gold mx-auto rounded-full" />
+          </div>
+          <div className="rounded-xl border border-border bg-card p-6 md:p-8 shadow-card flex flex-col md:flex-row md:items-center gap-6">
+            <div className="flex flex-col items-center justify-center rounded-lg bg-gradient-hero text-primary-foreground py-4 px-5 shrink-0 self-start">
+              <span className="text-xs uppercase tracking-widest text-secondary">
+                {new Date(nextEvent.date + "T12:00:00").toLocaleString("en-US", { month: "short" })}
+              </span>
+              <span className="font-display text-4xl font-bold leading-none">
+                {new Date(nextEvent.date + "T12:00:00").getDate()}
+              </span>
+              <span className="text-xs text-primary-foreground/80 mt-1">
+                {new Date(nextEvent.date + "T12:00:00").getFullYear()}
+              </span>
+            </div>
+            <div className="flex-1">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+                Next Event
+              </span>
+              <h2 className="mt-1 font-display text-fluid-lg font-bold uppercase text-navy-deep">
+                {nextEvent.title}
+              </h2>
+              <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="h-4 w-4 text-primary" /> {formatEventDate(nextEvent.date)}
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <MapPin className="h-4 w-4 text-primary" /> {nextEvent.location}
+                </span>
+              </div>
+              <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
+                {nextEvent.summary}
+              </p>
+            </div>
+            <Button asChild variant="hero" className="shrink-0 self-start md:self-center">
+              <Link to={`/events/${eventSlug(nextEvent)}`}>
+                View Event <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+      )}
 
       {/* MISSION */}
       <section className="container py-20">

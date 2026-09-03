@@ -1,21 +1,13 @@
-import { Calendar, MapPin, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { EVENTS } from "@/data/site";
+import { eventSlug, formatEventDate, todayISO } from "@/lib/events";
 import PageHeader from "@/components/PageHeader";
 
-const formatDate = (iso: string) => {
-  const d = new Date(iso + "T12:00:00");
-  return d.toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-};
-
 const Events = () => {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = todayISO();
   const upcoming = EVENTS.filter((e) => e.date >= today).sort((a, b) =>
     a.date.localeCompare(b.date)
   );
@@ -59,27 +51,30 @@ const Events = () => {
               </div>
               <div>
                 <h3 className="font-display text-xl font-bold uppercase text-navy-deep">
-                  {e.title}
+                  <Link
+                    to={`/events/${eventSlug(e)}`}
+                    className="hover:text-primary transition-colors"
+                  >
+                    {e.title}
+                  </Link>
                 </h3>
                 <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground">
                   <span className="inline-flex items-center gap-1.5">
-                    <Calendar className="h-4 w-4 text-primary" /> {formatDate(e.date)}
+                    <Calendar className="h-4 w-4 text-primary" /> {formatEventDate(e.date)}
                   </span>
                   <span className="inline-flex items-center gap-1.5">
                     <MapPin className="h-4 w-4 text-primary" /> {e.location}
                   </span>
                 </div>
                 <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
-                  {e.description}
+                  {e.summary}
                 </p>
               </div>
-              {e.rsvpUrl && (
-                <Button asChild variant="hero">
-                  <a href={e.rsvpUrl} target="_blank" rel="noopener noreferrer">
-                    RSVP <ExternalLink className="h-4 w-4" />
-                  </a>
-                </Button>
-              )}
+              <Button asChild variant="hero">
+                <Link to={`/events/${eventSlug(e)}`}>
+                  View Event <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             </article>
           ))}
         </div>
@@ -91,17 +86,19 @@ const Events = () => {
             </h2>
             <div className="mt-6 grid gap-3">
               {past.map((e) => (
-                <div
+                <Link
                   key={e.title + e.date}
-                  className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-muted/40 px-5 py-4"
+                  to={`/events/${eventSlug(e)}`}
+                  className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-muted/40 px-5 py-4 hover:bg-muted transition-colors"
                 >
                   <div>
                     <h3 className="font-semibold text-navy-deep">{e.title}</h3>
                     <p className="text-xs text-muted-foreground">
-                      {formatDate(e.date)} · {e.location}
+                      {formatEventDate(e.date)} · {e.location}
                     </p>
                   </div>
-                </div>
+                  <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                </Link>
               ))}
             </div>
           </>
