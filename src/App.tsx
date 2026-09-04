@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { lazy, Suspense } from "react";
 import Home from "./pages/Home.tsx";
 import Events from "./pages/Events.tsx";
 import EventDetail from "./pages/EventDetail.tsx";
@@ -13,6 +14,8 @@ import Bylaws from "./pages/Bylaws.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
+
+const Bylaws = lazy(() => import("./pages/Bylaws"));
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -27,7 +30,11 @@ const App = () => (
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/board" element={<Board />} />
           <Route path="/awards" element={<Awards />} />
-          <Route path="/bylaws" element={<Bylaws />} />
+          <Route path="/bylaws" element={
+            <Suspense fallback={<div>Loading...</div>}>
+            <Bylaws />
+            </Suspense>
+            }/>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
