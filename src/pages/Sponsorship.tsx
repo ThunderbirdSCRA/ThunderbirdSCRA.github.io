@@ -10,7 +10,7 @@ const Sponsorship = () => {
       <PageHeader
         eyebrow="Partner With Us"
         title="Sponsorship Opportunities"
-        description="Your support directly funds NCO recognition, recruitment efforts, scholarships, and chapter events that strengthen the Signal Corps community."
+        description="Your support directly funds Signaleer recognition, recruitment efforts, scholarships, and chapter events that strengthen the Signal Corps community."
       />
 
       <section className="container py-16">
