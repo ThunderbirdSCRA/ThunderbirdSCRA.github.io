@@ -1,12 +1,14 @@
 // Central data file — easy for non-developers to edit.
 // Update events, board members, and sponsorship tiers here.
 
+import shirtAsset from "@/assets/merch/shirt.png.asset.json";
+
 export const SITE = {
   name: "Thunderbird Chapter",
   longName: "Thunderbird Chapter — Signal Corps Regimental Association",
   facebookUrl: "https://www.facebook.com/people/Thunderbird-Chapter-Oklahoma-SCRA/61573525888171/",
   joinNowUrl: "https://signalcorps.org/memberships",
-  donateUrl: "https://app.autobooks.co/pay/thunderbird-signal-corps-regimental-assc",
+  donateUrl: "https://www.paypal.com/donate/?hosted_button_id=YU3R6CAYU3A7G",
   bylawsUrl: "/Thunderbird-Chapter-Bylaws-Signed.pdf", // Place updated by-laws in the Public Directory. Will need to update as bylaws update.
   candidUrl: "https://app.candid.org/profile/16412925/thunderbird-signal-corps-regimental-association-33-1949070", // Shouldn't need updating
   candidSealSrc: "https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16412925/svg", //Shouldn't need updating
@@ -348,3 +350,13 @@ export const AWARD_FAQS: AwardFAQ[] = [
       "Yes! When planning your presentation list, don't forget to look beyond the MMA and BOM for military personnel. Consider whether your chapter plans to recognize dedicated volunteers, supportive spouses, or non-signal personnel who have made outstanding contributions. Awards like the Wahatchee or the Brevet Colonel are excellent ways to honor these individuals at your event.",
   },
 ];
+
+// ---------------- MERCH ----------------
+export const MERCH = {
+  name: "Thunderbird Chapter T-Shirt",
+  price: "$25",
+  checkoutUrl: "https://www.paypal.com/ncp/payment/HTK6MGQ3L5JP2",
+  photo: shirtAsset.url,
+  description:
+    "Show your Thunderbird pride. These shirts are from a limited bulk order and are available to anyone who wants them. We prefer to coordinate local pickup when possible to avoid shipping fees. All proceeds support the chapter.",
+};
