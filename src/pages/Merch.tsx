@@ -2,7 +2,7 @@ import { ArrowRight, Shirt, Truck } from "lucide-react";
 import Layout from "@/components/Layout";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
-import { MERCH } from "@/data/site";
+import { MERCH } from "@/data/merch";
 
 const Merch = () => {
   return (

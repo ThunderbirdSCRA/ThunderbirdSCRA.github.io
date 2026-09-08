@@ -1,7 +1,7 @@
 // Central data file — easy for non-developers to edit.
 // Update events, board members, and sponsorship tiers here.
+// Merch items live in src/data/merch.ts.
 
-import shirtAsset from "@/assets/merch/shirt.png.asset.json";
 
 export const SITE = {
   name: "Thunderbird Chapter",
@@ -350,13 +350,3 @@ export const AWARD_FAQS: AwardFAQ[] = [
       "Yes! When planning your presentation list, don't forget to look beyond the MMA and BOM for military personnel. Consider whether your chapter plans to recognize dedicated volunteers, supportive spouses, or non-signal personnel who have made outstanding contributions. Awards like the Wahatchee or the Brevet Colonel are excellent ways to honor these individuals at your event.",
   },
 ];
-
-// ---------------- MERCH ----------------
-export const MERCH = {
-  name: "Thunderbird Chapter T-Shirt",
-  price: "$25",
-  checkoutUrl: "https://www.paypal.com/ncp/payment/HTK6MGQ3L5JP2",
-  photo: "@/assets/back_medium.png",
-  description:
-    "Show your Thunderbird pride. These shirts are from a limited bulk order and are available to anyone who wants them. We prefer to coordinate local pickup when possible to avoid shipping fees. All proceeds support the chapter.",
-};

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Users, Heart, Award, Calendar, MapPin, Shirt } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { SITE, EVENTS, MERCH } from "@/data/site";
+import { SITE, EVENTS } from "@/data/site";
+import { MERCH } from "@/data/merch";
 import { eventSlug, formatEventDate, getNextEvent } from "@/lib/events";
 import emblem from "@/assets/thunderbird-logo.png";
 import hero from "@/assets/hero-signal.jpg";
@@ -159,14 +160,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* MERCH */}
+      {/* FEATURED MERCH */}
       <section className="container py-16 md:py-20">
         <div className="rounded-2xl border border-border bg-card p-6 md:p-10 shadow-card overflow-hidden">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div className="order-2 md:order-1">
               <div className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-secondary">
                 <Shirt className="h-4 w-4" />
-                Chapter Merch
+                Featured Chapter Merch
               </div>
               <h2 className="mt-3 font-display text-3xl font-bold uppercase text-navy-deep md:text-4xl">
                 {MERCH.name}
