@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Users, Heart, Award, Calendar, MapPin } from "lucide-react";
+import { ArrowRight, Shield, Users, Heart, Award, Calendar, MapPin, Shirt } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { SITE, EVENTS } from "@/data/site";
+import { SITE, EVENTS, MERCH } from "@/data/site";
 import { eventSlug, formatEventDate, getNextEvent } from "@/lib/events";
 import emblem from "@/assets/thunderbird-logo.png";
 import hero from "@/assets/hero-signal.jpg";
@@ -156,6 +156,52 @@ const Home = () => {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* MERCH */}
+      <section className="container py-16 md:py-20">
+        <div className="rounded-2xl border border-border bg-card p-6 md:p-10 shadow-card overflow-hidden">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div className="order-2 md:order-1">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-secondary">
+                <Shirt className="h-4 w-4" />
+                Chapter Merch
+              </div>
+              <h2 className="mt-3 font-display text-3xl font-bold uppercase text-navy-deep md:text-4xl">
+                {MERCH.name}
+              </h2>
+              <p className="mt-2 font-display text-2xl font-bold text-primary">
+                {MERCH.price}
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                {MERCH.description}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button asChild variant="gold" size="lg">
+                  <a
+                    href={MERCH.checkoutUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    Buy Now <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/merch">View Details</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 overflow-hidden rounded-xl border border-border bg-muted">
+              <img
+                src={MERCH.photo}
+                alt={`${MERCH.name} product photo`}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

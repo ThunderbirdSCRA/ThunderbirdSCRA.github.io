@@ -10,7 +10,8 @@ import EventDetail from "./pages/EventDetail.tsx";
 import Sponsorship from "./pages/Sponsorship.tsx";
 import Board from "./pages/Board.tsx";
 import Awards from "./pages/Awards.tsx";
-import Bylaws from "./pages/Bylaws.tsx";
+import Merch from "./pages/Merch.tsx";
+import DonationComplete from "./pages/DonationComplete.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -30,11 +31,13 @@ const App = () => (
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/board" element={<Board />} />
           <Route path="/awards" element={<Awards />} />
+          <Route path="/merch" element={<Merch />} />
           <Route path="/bylaws" element={
             <Suspense fallback={<div>Loading...</div>}>
             <Bylaws />
             </Suspense>
             }/>
+          <Route path="/donation-complete" element={<DonationComplete />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

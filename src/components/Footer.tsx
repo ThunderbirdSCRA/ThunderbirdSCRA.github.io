@@ -64,6 +64,11 @@ const Footer = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/merch" className="hover:text-secondary transition-colors">
+                Merch
+              </NavLink>
+            </li>
+            <li>
               <a
                 href={SITE.joinNowUrl}
                 target="_blank"
